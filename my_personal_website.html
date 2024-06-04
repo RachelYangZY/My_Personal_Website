@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachel's Personal Webpage</title>
+    <style>
+        
+        /* Basic styling for the tabs */
+        .tab {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        .tab button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+        }
+
+        /* Stylish heading banner */
+        .banner {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .banner h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            margin: 0;
+        }
+        .social-icons a {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #f0f0f0; /* Set your desired color */
+        }
+
+        .social-icons a:hover {
+            color: #0077B5; /* Change color on hover (LinkedIn blue) */
+        }
+
+        .projects {
+            background-color: whitesmoke;
+            padding: 2px;
+            border-radius: 10px; /* Add rounded corners */
+            margin-bottom: 10px;
+
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            margin: 0px 20px;
+            /* margin-right: 30px; */
+            /* background-color: lightgrey; */
+            padding: 0;
+            /* border-radius: 10px;  */
+        }
+
+        .tag {
+            background-color: lightgrey;
+            border-radius: 3px;
+            padding: 2px 5px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        p {
+            margin: 0px 0px 10px 0px;
+        }
+        
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="banner">
+        <h1>Rachel Yang</h1>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rachel-yang-651622223" target="_blank">
+                <i class="fa fa-linkedin fa-fw"></i>
+            </a>
+            <a href="https://github.com/RachelYangZY" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+            </a>
+            <a href="mailto:rachelzy.yang@mail.utoronto.com">
+                <i class="fa fa-envelope fa-fw"></i>
+            </a>
+            <a href="tel:+1 647 863 0873">
+                <i class="fa fa-phone fa-fw"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="tab">
+        <button onclick="openTab(event, 'about')">About Me</button>
+        <button onclick="openTab(event, 'experiences')">Past Experiences</button>
+        <button onclick="openTab(event, 'projects')">Personal Projects</button>
+        <button onclick="openTab(event, 'contact')">Contact</button>
+    </div>
+
+    <div id="about" class="tabcontent" style="display:block">
+        <h2>About Me</h2>
+
+            <p style="margin-right: 100px; ">
+            <img src="C:\Users\ryang\OneDrive\Desktop\myImage_Singapore.png" alt="Your Photo" style="float:left;width:275px;margin-right:20px;">
+            <br>
+            <br>
+                Hi! I'm Rachel Yang, a third year Engineering Science student at the University of Toronto. I'll be majoring 
+                in Electrical and Computer Engineering and minoring in Bioengineering and Artificial Intelligence.
+                My interests lie in a wide variety of fields:
+            </p>
+                <ul style="margin-left: 300px;margin-right: 100px;">
+                    <li><b>Hardware programming:</b> I love tinkering with microcontrollers and building gadgets! </li>
+                    <li><b>Front-end design:</b> 
+                        <!-- Being Cadet Correspondent at a young age where I designed social media posts and carried 
+                        out/edited engaging interview videos, my interests have transformed into crafting beautiful, user-friendly interfaces. -->
+                        I often say that a big contribution to my love of front-end design stemmed from the school newspaper that
+                        I was Editor-in-Chief for. The organization and user engagement strategies formed a foundation for crafting beatiful, 
+                        user-friendly interfaces.
+                    </li>
+                    <li><b>Artificial Intelligence:</b> Whether it be utilizing APIs or building Neural Networks from the fundamentals, 
+                        I know my way around utilizing these models to create something useful.</li>
+                    <li><b>Biology:</b> My favourite subject will forever be biology, and I have competed in medical competitions, delved into 
+                        independent research projects, and extensively studied the intricacies of life. </li>
+                    <li><b>Figure skating:</b> My absolute favourite relaxation activity is gliding and spinning across the ice. </li>
+                </ul>
+            <p style="margin-right: 100px;">
+                Despite the breadth of my interests, each one receives my full dedication and passion. Learn more about how I've pursued knowledge
+                in my "Past Experiences" and "Personal Projects" section!
+            </p>
+
+        
+
+    </div>
+
+    <div id="experiences" class="tabcontent">
+        <h2>Past Experiences</h2>
+        <p>
+            Coming Soon!
+        </p>
+    </div>
+
+    <div id="projects" class="tabcontent">
+        <h2>Personal Projects</h2>
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search by tag" onkeyup="filterListings()">
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">My Personal Website</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">HTML</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS</span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> May 21, 2024 <br>
+                <br>
+                This website you're currently browsing on was a self-exploratory attempt to learn how to hardcode a user interface using HTML. The first-and-foremost
+                purpose of this website is to document all my projects for myself so that I can refer back to them in the future when the knowledge is needed.
+            </p>
+        </div>
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">Seamcarving</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">C </span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> April 10, 2023 <br>
+                <br>
+                Implemented a content-aware image resizing program through the computation of the dual-gradient energy function 
+            </p>
+        </div>
+        
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">Autocomplete</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">C </span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> February 26, 2023 <br>
+                <br>
+                Developed a rapid autocomplete feature that swiftly identifies and retrieves the primary terms corresponding to a query string.
+            </p>
+        </div>
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">Semantic Similarity Test</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">Python</span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> December 6, 2022 <br>
+                <br>
+                Built an intelligent system that can answer “Synonym” type questions from the Test of English as a Foreign Language (TOEFL) by approximating the semantic similarity of a pair of words
+            </p>
+        </div>
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">CIV102 Bridge Project</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">MATLAB</span>
+                <span class="tag">Civil Engineering</span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> November 29, 2022 <br>
+                <ul>
+                    <li>Iterated through 10+ bridge designs on MATLAB and evaluated their 
+                        capacity to withstand the heaviest moving load, considering constraints 
+                        such as limited materials and constructability</li>
+                    <li>Built the chosen design using matboard and concrete glue, resulting in 
+                        full construction marks and a load bearing of 700 Newtons</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">Gomoku</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">Python</span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> November 20, 2022 <br>
+                <br>
+                To be completed.
+            </p>
+        </div>
+
+        <div class="projects">
+            <h3 style="margin-left: 20px; margin-right: 20px;">Credit Card Checker</h3>
+            <div class="tags"> <b>Skills:</b> 
+                <span class="tag">Python</span>
+            </div>
+            <p style="margin-left: 20px;margin-right: 20px;">
+                <b>Date of Completion: </b> October 16, 2022 <br>
+                <br>
+                To be completed.
+            </p>
+        </div>
+
+        <script>
+            function filterListings() {
+                let input = document.getElementById('searchInput').value.toLowerCase();
+                let projects = document.querySelectorAll('.projects');
+    
+                projects.forEach(project => {
+                    let tags = project.querySelectorAll('.tag');
+                    let tagArray = Array.from(tags).map(tag => tag.textContent.toLowerCase());
+                    if (tagArray.some(tag => tag.includes(input))) {
+                        project.style.display = '';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+
+    </div>
+
+    <div id="contact" class="tabcontent">
+        <h2>Contact</h2>
+        <p>
+            <b>Phone:</b> +1 (647) 863 0873 <br>
+            <b>School Email:</b> rachelzy.yang@mail.utoronto.ca <br>
+            <b>Personal Email:</b> ryangzy@gmail.com <br> <br>
+            Please feel free to reach out about any questions, comments, or even just for a random conversation! I would be overjoyed to connect :)
+        </p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            const tabcontent = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+</body>
+</html>
